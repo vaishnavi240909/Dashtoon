@@ -1,0 +1,175 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #333;
+    color: #c7c7c7;
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+.app-header {
+    background-color: #333;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.comic-strip {
+    display: grid;
+    background-color: rgba(0,0,0,0.5);;
+    height: 100%;
+    /* grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr); */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    padding: 20px;
+    border-radius: 10px;
+    gap: 5px;
+    -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+
+.comic-strip::-webkit-scrollbar {
+    display: none;
+}
+
+.comic-panel {
+    border: 2px solid #555;
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.5);
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+#comicForm {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    height: 100%;
+    /* display: inline-flex; */
+}
+
+#inputFields input {
+    flex: 40%;
+    margin: 6px 3px;
+    padding: 10px;
+    position:relative;
+    text-wrap: wrap;
+    border-radius: 10px;
+    border-color: #555;
+}
+
+#inputFields textarea {
+    flex: 40%;
+    margin: 6px 3px;
+    padding: 10px;
+    position:relative;
+    border-radius: 10px;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+textarea::-webkit-scrollbar {
+    display: none;
+}
+
+
+#inputFields {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    /* gap: 10px; */
+}
+
+/* #generateComic {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+} */
+
+#comicStrip {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.comicPanel {
+    width: 100%;
+    /* margin: 10px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3); */
+}
+.annotation {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 5px;
+    /* display: none; */
+}
+
+.panel-container {
+    display: inline-block;
+    text-align: center;
+}
+@media (max-width: 600px) 
+{
+    .col {
+        flex: 100%;
+    }
+
+    .comic-editor {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+    }
+}
+
+@media (min-width: 600px) {
+    .col {
+        flex: 50%;
+    }
+
+    .comic-editor {
+        padding: 20px;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+
+    }
+}
+
+#saveComic {
+    display: none;
+}
+
+#shareComic {
+    display: none;
+}
+ 
+#addAnnotations {
+    display: none;
+}
